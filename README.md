@@ -59,11 +59,6 @@ Add loading states and error handling for API requests.
 🌍 Live Demo
 🔗 View the Live App Here (link will be updated once deployed)
 
-📂 How to Run This Project
-Clone the repository:
-
- git clone https://github.com/your-username/your-repo-name.git
-
 
 Open index.html in your browser.
 
