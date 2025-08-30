@@ -2,36 +2,6 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background: #f5f5f5;
-}
-
-.landing-page .hero {
-    height: 100vh;
-    background: url('../images/landing-bg.jpg') no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.landing-page .overlay {
-    text-align: center;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 2rem;
-    border-radius: 8px;
-    color: white;
-}
-
-.btn {
-    background: purple;
-    color: white;
-    padding: 0.7rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-}
-/* ===== Global Styles ===== */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f5f5f5;
     color: #333;
 }
 
@@ -107,6 +77,30 @@ header {
 
 .search-section button:hover {
     background: darkmagenta;
+}
+
+/* ===== Category Buttons ===== */
+.category-section {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 2rem;
+}
+
+.categoryBtn {
+    padding: 0.6rem 1.2rem;
+    background: #fff;
+    border: 2px solid purple;
+    color: purple;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.categoryBtn:hover {
+    background: purple;
+    color: white;
 }
 
 /* ===== Recipe List ===== */
