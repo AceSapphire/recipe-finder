@@ -1,31 +1,30 @@
 const searchBtn = document.getElementById('searchBtn');
 const searchInput = document.getElementById('searchInput');
 const recipeList = document.getElementById('recipeList');
-const categoryBtns = document.querySelectorAll('.categoryBtn');
+const cuisineBtns = document.querySelectorAll('.categoryBtn');
 
 // Search by button click
 searchBtn.addEventListener('click', fetchRecipes);
 
 // Search by Enter key
-searchInput.addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-        fetchRecipes();
-    }
+searchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') fetchRecipes();
 });
 
-// Category button clicks
-categoryBtns.forEach(btn => {
+// Cuisine button clicks (use Area)
+cuisineBtns.forEach(btn => {
     btn.addEventListener('click', () => {
-        fetchByCategory(btn.dataset.category);
+        const area = btn.dataset.area; // e.g. "Spanish"
+        fetchByArea(area);
     });
 });
 
-// Default recipes on load
+// Default recipes on load (show Spanish by default)
 window.addEventListener('DOMContentLoaded', () => {
-    fetchByCategory("Chicken"); // You can change default to anything
+    fetchByArea('Spanish');
 });
 
-// Fetch recipes by search
+// Fetch recipes by search term
 async function fetchRecipes() {
     const query = searchInput.value.trim();
     if (!query) {
@@ -34,7 +33,7 @@ async function fetchRecipes() {
     }
 
     try {
-        const res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${query}`);
+        const res = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${encodeURIComponent(query)}`);
         const data = await res.json();
 
         if (data.meals) {
@@ -48,24 +47,24 @@ async function fetchRecipes() {
     }
 }
 
-// Fetch recipes by category
-async function fetchByCategory(category) {
+// Fetch recipes by cuisine (Area)
+async function fetchByArea(area) {
     try {
-        const res = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${category}`);
+        const res = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${encodeURIComponent(area)}`);
         const data = await res.json();
 
         if (data.meals) {
             displayRecipes(data.meals);
         } else {
-            recipeList.innerHTML = '<p>No recipes available for this category.</p>';
+            recipeList.innerHTML = `<p>No recipes available for ${area} cuisine.</p>`;
         }
     } catch (error) {
-        console.error('Error fetching category recipes:', error);
-        recipeList.innerHTML = '<p>Unable to load category recipes.</p>';
+        console.error('Error fetching area recipes:', error);
+        recipeList.innerHTML = '<p>Unable to load cuisine recipes.</p>';
     }
 }
 
-// Display recipes
+// Render recipe cards
 function displayRecipes(recipes) {
     recipeList.innerHTML = recipes.map(meal => `
         <div class="recipe-card" onclick="viewDetails('${meal.idMeal}')">
@@ -75,7 +74,7 @@ function displayRecipes(recipes) {
     `).join('');
 }
 
-// View details
+// Navigate to details page
 function viewDetails(id) {
     localStorage.setItem('selectedRecipe', id);
     window.location.href = 'details.html';
