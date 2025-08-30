@@ -32,7 +32,7 @@ function getIngredients(meal) {
     for (let i = 1; i <= 20; i++) {
         const ingredient = meal[`strIngredient${i}`];
         const measure = meal[`strMeasure${i}`];
-        if (ingredient) {
+        if (ingredient && ingredient.trim()) {
             ingredients.push(`${ingredient} - ${measure}`);
         }
     }
