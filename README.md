@@ -1,76 +1,57 @@
-🍽️ Recipe Finder
-A simple and responsive web app that helps you find recipes based on ingredients or dish names built with vanilla HTML, CSS, and JavaScript.
+Recipe Finder
 
-📌 About the Project
-The Recipe Finder lets you search for recipes by typing in any ingredient or dish name. It connects to a public API to fetch recipes and shows you a list of results with images. You can then click a recipe to see more details like ingredients and instructions.
-I’m keeping the design simple, clean, and user-friendly, while making sure it works well on both desktop and mobile devices.
+A simple and responsive web app that helps you find recipes based on ingredients or dish names. Built with HTML, CSS, and JavaScript, using TheMealDB API.
 
-✨ Features (Completed & Planned)
-✅ Search recipes by ingredient or dish name
- ✅ Display recipe name and image in results
- ✅ Responsive layout for different screen sizes
- 🚧 View detailed ingredients and instructions (in progress)
- 🚧 Loading and error messages for better user experience
- 🚧 Improved styling with media queries
+About the Project
 
-🛠️ Tech Stack
-HTML5 – Structure
+The Recipe Finder allows users to search for recipes by typing in any ingredient or dish name. It fetches data from a public API and displays results with images. Users can also view details like ingredients and instructions. The design is simple, clean, and mobile-friendly.
 
+Features
 
-CSS3 – Styling & responsiveness
+-Search recipes by ingredient or dish name
 
+-Display recipe name and image in results
 
-JavaScript (ES6+) – Logic & API calls
+-View detailed ingredients and instructions
 
+-Responsive layout for different screen sizes
 
-TheMealDB API – Recipe data (currently used)
+-Loading and error messages for better user experience
 
+Tech Stack
 
-(Originally planned: Edamam Recipe Search API)
+1. HTML5 – Structure
 
+2. CSS3 – Styling & responsiveness
 
+3. JavaScript (ES6+) – Logic & API calls
 
-📅 Progress
-Part 3 – Start Building:
- So far, I have:
-Set up the project structure and base files.
+4. TheMealDB API – Recipe data
 
+Progress
 
-Created the search bar and results section in HTML.
+So far, I have:
 
+1. Set up the project structure and base files.
 
-Fetched recipe data from TheMealDB API.
+2. Created the search bar and results section in HTML.
 
+3. Integrated category buttons (Spanish, Italian, English).
 
-Displayed recipe results dynamically with JavaScript.
+4. Fetched recipe data from TheMealDB API.
 
+5. Displayed recipe results dynamically with JavaScript.
 
+6. Added recipe details view with ingredients and instructions.
 
-🚀 Next Steps
-Add recipe details view with ingredients and instructions.
+Live Demo
 
+🔗 ........
 
-Improve mobile responsiveness using CSS media queries.
+To run locally:
 
+-Clone the repo
 
-Add loading states and error handling for API requests.
+-Open index.html in your browser
 
-
-🌍 Live Demo
-🔗 View the Live App Here (link will be updated once deployed)
-
-
-Open index.html in your browser.
-
-
-Start searching for recipes!
-
-
-📸 Demo Preview (Coming Soon)
-Once I finish the recipe details view, I’ll add screenshots and a live demo link here.
-🤝 Contributing
-This is a personal project for my ALX capstone, but feedback and suggestions are always welcome!
-
-
-# recipe-finder
-A simple, responsive recipe search app built with vanilla HTML, CSS, and JavaScript, using TheMealDB API.
+-Start searching for recipes
