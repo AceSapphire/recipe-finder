@@ -2,7 +2,12 @@ const searchBtn = document.getElementById('searchBtn');
 const searchInput = document.getElementById('searchInput');
 const recipeList = document.getElementById('recipeList');
 const cuisineBtns = document.querySelectorAll('.categoryBtn');
-
+const arrowBack = document.getElementById("back-btn")
+// Go back function
+function goBack() {
+    window.history.back();
+}
+arrowBack.addEventListener('click', goBack)
 // Search by button click
 searchBtn.addEventListener('click', fetchRecipes);
 
