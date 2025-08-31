@@ -4,7 +4,7 @@ A simple and responsive web app that helps you find recipes based on ingredients
 
 About the Project
 
-The Recipe Finder allows users to search for recipes by typing in any ingredient or dish name. It fetches data from a public API and displays results with images. Users can also view details like ingredients and instructions. The design is simple, clean, and mobile-friendly.
+The Recipe Finder allows users to search for recipes by typing in any dish name. It fetches data from a public API and displays results with images. Users can also view details like ingredients and instructions. The design is simple, clean, and mobile-friendly.
 
 Features
 
