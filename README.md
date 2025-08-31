@@ -8,7 +8,7 @@ The Recipe Finder allows users to search for recipes by typing in any ingredient
 
 Features
 
--Search recipes by ingredient or dish name
+-Search recipes by dish name
 
 -Display recipe name and image in results
 
@@ -46,7 +46,9 @@ So far, I have:
 
 Live Demo
 
-🔗 ........
+🔗 Live Demo  
+Recipe Finder (https://recipe-finder-nine-fawn.vercel.app)
+
 
 To run locally:
 
