@@ -4,11 +4,11 @@ A simple and responsive web app that helps you find recipes based on ingredients
 
 About the Project
 
-The Recipe Finder allows users to search for recipes by typing in any ingredient or dish name. It fetches data from a public API and displays results with images. Users can also view details like ingredients and instructions. The design is simple, clean, and mobile-friendly.
+The Recipe Finder allows users to search for recipes by typing in any dish name. It fetches data from a public API and displays results with images. Users can also view details like ingredients and instructions. The design is simple, clean, and mobile-friendly.
 
 Features
 
--Search recipes by ingredient or dish name
+-Search recipes by dish name
 
 -Display recipe name and image in results
 
@@ -46,7 +46,9 @@ So far, I have:
 
 Live Demo
 
-🔗 ........
+🔗 Live Demo  
+Recipe Finder (https://recipe-finder-nine-fawn.vercel.app)
+
 
 To run locally:
 
